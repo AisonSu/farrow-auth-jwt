@@ -1,0 +1,60 @@
+{
+  "name": "farrow-auth-jwt",
+  "version": "0.1.0",
+  "description": "JWT authentication for Farrow HTTP framework",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "pnpm run clean",
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "commit": "cz"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "farrow",
+    "jwt",
+    "authentication",
+    "auth",
+    "token",
+    "session"
+  ],
+  "author": "Aison <aisonsu@outlook.com>",
+  "license": "MIT",
+  "packageManager": "pnpm@10.15.0",
+  "dependencies": {
+    "farrow-http": "^2.0.0",
+    "farrow-pipeline": "^2.3.0",
+    "farrow-schema": "^2.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "path-to-regexp": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "^20.10.0",
+    "@types/supertest": "^6.0.2",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "supertest": "^6.3.3",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4"
+  },
+  "peerDependencies": {
+    "farrow-http": "^2.0.0",
+    "farrow-pipeline": "^2.0.0",
+    "farrow-schema": "^2.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
